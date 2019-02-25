@@ -1,0 +1,838 @@
+/*
+Theme Name: TREASURE ISLAND MARINA
+Description: Custom Wordpress created for treasureislandmarina.net by your friends at CYber SYtes.
+Author: Cebo Campbell
+Version: 1.3
+*/
+
+
+/* ---------------------------------------------- CSS RESETS
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, button, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	background: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+header, section, article, section, aside, footer { display: block; }
+
+table,tbody,tfoot,thead,tr,th,td {
+	text-align: left;
+}
+
+body {
+	font: 14px/22px "Trebuchet MS", sans-serif;
+	color: #5e5e5e;
+}
+
+.footerbox .weatherbox table {
+	font: 12px/12px "Trebuchet MS", sans-serif;
+}
+
+	.weatherbox input[type="text"] {
+		border: 1px solid black;
+		display: inline;
+	}
+
+article table td {
+	padding: 8px 0;
+}
+
+	.weatherbox table td {
+		padding: 0;
+	}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h2 {
+	color: #E5E5E5;
+	font: 35px 'LeagueGothicRegular', sans-serif;
+	margin-bottom: 15px;
+}
+
+h3 {
+	clear: both;
+	color: #40bbe0;
+	font: 30px 'LeagueGothicRegular', sans-serif;
+	margin-bottom: 10px;
+}
+
+h4 {
+	color: #40bbe0;
+	font: 25px 'LeagueGothicRegular', sans-serif;
+}
+
+	.ngg-album-compact h4 {
+		font-size: 25px !important;
+	}
+
+
+
+strong {
+	font-weight: bold;
+	font-size: 16px;
+	color: #970209;
+}
+ul, ol, p {
+	padding: 0 0 18px 0;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+	article ul {
+		list-style: square;
+		list-style-position: inside;
+	}
+
+	article ul li {
+		margin-bottom: 10px;
+	}
+
+blockquote {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+a, a:visited {
+	color: #c66411;
+}	
+
+	h2 a, h3 a, h2 a:visited, h3 a:visited {
+		color: #40bbe0;
+	}
+
+a:hover, a:active, h2 a:hover, h3 a:hover, h2 a:active, h3 a:active {
+	color: #2ea6ca;
+}
+
+.navigation a {
+	color: #eeeeee;
+}
+
+	.footer a, .footer a:visited {
+		border-bottom: 1px solid #fff;
+		color: #fff;
+	}
+
+/* remember to define focus styles! */
+:focus {outline: 0;}
+
+img {border:0;}
+a img {border:0}
+
+/*  ----------------------------------------------------------- Float Definitions */
+
+.clear {clear:both;} 
+
+	form .clear { height: 15px; }
+
+
+.right {float: right;} 
+
+.left {float: left;}
+
+/* ------------------------------------------------------------ Required wordpress float definitions */
+
+.alignright {float: right;margin: 0 0 2px 7px;}
+.alignleft {float: left;margin: 0 7px 2px 0;}
+
+img.left, img.alignleft {clear: left; float: left;margin: 0 7px 2px 0;}
+
+img.right, img.alignright {clear: right; float: right;margin: 0 0 2px 7px;}
+
+.post img.aligncenter, .attachment img.aligncenter { display:block; margin: 0 auto; text-align: center; }
+
+/* ------------------------------------------------------------- Defaults to remove padding, margin and borders from elements */
+
+.nopad {
+	padding: 0px !important;
+}
+.nomargin {
+	margin: 0px !important;
+}
+.noborder {
+	border: none !important;
+}
+
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url('fonts/League_Gothic-webfont.eot');
+    src: url('fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/League_Gothic-webfont.woff') format('woff'),
+         url('fonts/League_Gothic-webfont.ttf') format('truetype'),
+         url('fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* ------------------------------------------------------------- Critical Elements to style for all projects      */
+
+body {
+	margin: 0px;
+	background-color: #fff;
+	background-image: url(images/waterwrap.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 185px;
+}
+.wrap {
+	background: url(images/wrap.jpg) top repeat-x;
+	height: 189px;
+	min-width: 1000px;
+	margin: 0;
+}
+
+.container {
+	width: 1000px;
+	margin: auto;
+	padding: 10px;
+	position: relative;
+	z-index: 5000;
+}
+
+.logo {
+	height: 86px; width: 328px;
+	float: left;
+	margin: 5px 30px 27px 0;	
+	*margin-bottom: 17px;
+}
+.logo a:hover {
+	color: #FFFF9C;
+}
+.largefont {
+ 	color: #FFFFFF;
+    float: left;
+    font: 32px 'LeagueGothicRegular', Impact, Arial, sans-serif;
+    font-weight: lighter;
+    padding-left: 20px;
+    padding-top: 40px;
+    text-shadow: 1px 1px 5px #333333;
+    width: 580px;
+}
+.navigation {
+	width: 980px;
+	height: 60px;
+	margin-bottom: 30px;
+	padding: 0;
+	*margin-top: 0;
+}
+
+.navigation ul li {
+	line-height: 60px;
+	font-size: 17px;
+	font-weight: bold;
+	text-shadow: 1px 1px 0 #cc6a07;
+	float: left;
+	color: #fff;
+	background: url(images/vline.png) left repeat-y;
+	padding: 0 20px;
+	margin: 0;
+}
+
+	.navigation ul li:first-child {
+		background: none;
+		padding-left: 0;
+	}
+
+.navigation li a {
+	color: #faf7f2;
+}
+
+.navigation li a:hover {
+	color: #FFFE88;
+}
+
+	li#menu-item-91 a, li#menu-item-92 a, li#menu-item-15 a {
+		display: block;
+		padding-left: 55px;
+	}
+
+	li#menu-item-91 a {
+		background: url(images/icon-lock.png) center left no-repeat;
+	}
+	
+	li#menu-item-92 a {
+		background: url(images/icon-wrench.png) center left no-repeat;
+	}
+	
+	li#menu-item-15 a {
+		background: url(images/icon-wheel.png) center left no-repeat;
+	}
+
+#featured {
+	width: 952px;
+	margin: 20px auto auto;
+	min-height: 397px;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 8px #333;
+	-webkit-box-shadow: 0px 0px 8px #333;
+	overflow: hidden;
+	padding: 20px;
+}
+.pages {
+	width: 960px;
+	margin: 20px auto;
+	min-height: 600px;
+	background: #fff;
+	-moz-box-shadow: 0px 0px 8px #333;
+	-webkit-box-shadow: 0px 0px 8px #333;
+	padding: 20px;
+	position: relative;
+	z-index: 2;
+}
+.vlinner {
+	position: absolute;
+	right: 340px;
+	top: 0;
+	height: 100%;
+	width: 3px;
+	background: url(images/vline2.png) repeat-y;
+	z-index: 4;
+}
+
+.pagecontent {
+	width: 600px;
+	float: left;
+	padding: 5px 5px 10px 20px;
+	margin-right: 10px;
+}
+
+.pages .pagecontent h1 { 
+    color: #E8700A;
+    font: 40px/45px 'LeagueGothicRegular', Impact, Arial, sans-serif;
+    margin: 10px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+	.page-id-87 .pages .pagecontent h1, .page-id-85 .pages .pagecontent h1, .page-id-6 .pages .pagecontent h1 {
+		padding-left: 55px;
+	}
+
+	/* Boat Storage */
+	.page-id-87 .pages .pagecontent h1 {
+		background: url(images/hicon-lock.png) top left no-repeat;
+	}
+
+	/* Parts and Service */
+	.page-id-85 .pages .pagecontent h1 {
+		background: url(images/hicon-wrench.png) top left no-repeat;
+	}
+	
+	/* Charters, Tours and Rentals */
+	.page-id-6 .pages .pagecontent h1 {
+		background: url(images/hicon-wheel.png) top left no-repeat;
+	}
+
+
+	.bigheading {
+		text-align: center;
+		color: #064c66;
+		font: 90px/100px 'LeagueGothicRegular', Impact, Arial, sans-serif;
+		margin: 0;
+		text-transform: uppercase;
+		text-shadow: 1px 1px #fff;
+}
+
+
+.secondside {
+	width: 300px;
+	margin-top: 20px;
+	padding: 5px;
+	float: right;
+}
+.secondside li .ngg-widget {
+	text-align: center;
+}
+
+	/* images in sidebar */
+	
+	.ngg-widget img {
+		margin-bottom: 10px !important;
+	}
+
+
+.secondside li li {
+	border: none;
+	padding: 3px;
+	margin: 3px 0;
+}
+.secondside img {
+	padding: 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.secondside a {
+	color: #E8700A;
+}
+.sidebar {
+	width: 350px;
+	padding: 5px;
+	float: right;
+}
+.sidebar img {
+	padding: 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+
+.featuredboxes {
+	width: 1000px;
+	margin: 0 0 10px 0;
+	padding: 0;
+	position: relative;
+	z-index: 5000;
+}
+
+.featuredboxes li {
+	display: inline-block;
+	*float: left;
+	margin: 10px;
+	width: 220px;
+}
+
+.featuredboxes li a {
+	padding-top: 30px;
+	background: url(images/buttonbg.jpg) repeat-x #df6b01;
+	display: block;
+	width: 215px;
+	height: 100px;
+	margin: 10px;
+	border: 5px solid #fff;
+	-moz-box-shadow: 0 0 8px #7cbfd9;
+	-webkit-box-shadow: 0 0 8px #7cbfd9;
+	box-shadow: 0 0 8px #7cbfd9;
+	font: 30px/33px 'LeagueGothicRegular', Impact, Arial, sans-serif;
+		color: #fff;
+		text-shadow: 1px 1px #d86806;
+	text-align: center;
+	vertical-align: middle;
+}
+
+	.featuredboxes li a:hover {
+		color: #095d7f;
+		text-shadow: 1px 1px #ffa70d;
+	}	
+
+.gradient {
+	background: url(images/gradient.jpg) repeat-x;
+	height: 420px;
+	margin-top: -420px;
+	z-index: 5;
+}
+
+
+/* CTA BOXES
+   ================================================== */
+
+.buckets {
+	display: block;
+	margin: 0 auto 20px;
+	overflow: auto;
+	position: relative;
+}
+
+.buckets li {
+	background: #1da9da; /* for non-CSS3 browsers */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#d3fbfb', endColorstr='#1da9da'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#d3fbfb), to(#1da9da)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #d3fbfb,  #1da9da); /* for firefox 3.6+ */
+	border: 5px solid #FFFFFF;
+	box-shadow: 0 0 8px #ccc;
+	display: inline-block;
+	margin-left: 29px;
+	width: 300px;
+	*float: left;
+}
+
+	.buckets li:hover {
+		background: #179ecd; /* for non-CSS3 browsers */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a8ecec', endColorstr='#179ecd'); /* for IE */
+		background: -webkit-gradient(linear, left top, left bottom, from(#a8ecec), to(#179ecd)); /* for webkit browsers */
+		background: -moz-linear-gradient(top,  #a8ecec,  #179ecd); /* for firefox 3.6+ */
+
+	}
+
+	.buckets li:first-child {
+		margin-left: 0;
+	}
+
+	.buckets li a {
+		color: #fff;
+		display: block;
+		font: 35px 'LeagueGothicRegular', Arial, sans-serif;
+		padding: 125px 20px 20px;
+		text-align: center;
+		text-shadow: 1px 1px #0a8fc3;
+		width: 260px; /* 320 - 40 - 10 = 260 */
+	}
+	
+		.storage {
+			background: url(images/bucket-lock.png) center 10px no-repeat;
+		}
+		
+		.service {
+			background: url(images/bucket-wrench.png) center 10px no-repeat;
+		}
+		
+		.charters {
+			background: url(images/bucket-wheel.png) center 10px no-repeat;
+		}
+
+
+
+/* CONTAINER
+   ================================================== */
+
+div.orbit-wrapper {
+	margin-bottom: 30px;
+    position: relative; }
+
+div.orbit {
+    position: relative;
+    overflow: hidden }
+
+div.orbit>img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: none; }
+
+div.orbit>a {
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 20px0\;
+    line-height: 0; 
+    display: none; }
+
+.orbit>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+
+/* TIMER
+   ================================================== */
+
+div.timer {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: .6;
+    cursor: pointer;
+    z-index: 1001; }
+
+span.rotator {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    z-index: 3; }
+
+span.mask {
+    display: block;
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow: hidden; }
+
+span.rotator.move {
+    left: 0 }
+
+span.mask.move {
+    width: 40px;
+    left: 0;
+   }
+
+span.pause {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    opacity: 0; }
+
+div.timer:hover span.pause,
+span.pause.active {
+    opacity: 1 }
+
+
+/* CAPTIONS
+   ================================================== */
+
+.orbit-caption {
+    display: none;
+    font-family: 'Museo500';}
+
+.orbit-caption span {
+    font-family: 'Museo500';}
+
+
+.orbit-wrapper .orbit-caption {
+    background: none;
+    z-index: 1000;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+	padding: 7px 0;
+    font-size: 60px;
+    position: absolute;
+    right: 40px;
+    bottom: 50px;
+    font-family: 'Museo500';
+    width: 200px; 
+    text-align: right;
+    }
+
+
+/* DIRECTIONAL NAV
+   ================================================== */
+
+div.slider-nav {
+    display: block }
+
+div.slider-nav span {
+    width: 78px;
+    height: 100px;
+    text-indent: -9999px;
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    margin-top: -50px;
+    cursor: pointer; }
+
+div.slider-nav span.right {
+    right: 0; }
+
+div.slider-nav span.left {
+    left: 0; }
+
+/* BULLET NAV
+   ================================================== */
+
+.orbit-bullets {
+    position: absolute;
+    z-index: 1000;
+    list-style: none;
+    bottom: -40px;
+    left: 50%;
+	margin-left: -50px;
+    padding: 0; }
+
+.orbit-bullets li {
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #999;
+    text-indent: -9999px;
+    width: 13px;
+    height: 12px;
+    overflow: hidden; }
+
+.orbit-bullets li.active {
+    color: #222;
+    background-position: -8px 0; }
+    
+.orbit-bullets li.has-thumb {
+    background: none;
+    width: 100px;
+    height: 75px; }
+
+.orbit-bullets li.active.has-thumb {
+    background-position: 0 0;
+    border-top: 2px solid #000; }
+
+
+
+
+/***** NGG *****/
+
+.ngg-imagebrowser img {
+	border: 0 !important;
+	margin: 0 auto !important;
+	width: auto !important;
+	max-width: 100% !important;
+}
+
+.ngg-widget img {
+	border: 1px solid #a9a9a9 !important;
+}
+
+.ngg-album-compact { 
+	height: auto !important;
+}
+
+.ngg-imagebrowser-desc p {
+	clear: both;
+	margin: 15px 0;
+	text-align: center;
+}
+
+/**** END NGG ****/
+
+.footer {
+	min-height: 300px;
+	background: url(images/footerbg.jpg) repeat;
+	margin: 0;
+}
+
+	.title {
+		color: #fff;
+		font: 25px 'LeagueGothicRegular', Arial, sans-serif;
+	}
+
+.footercontainer {
+	width: 860px;
+	margin: auto;
+	padding-top: 45px;
+	text-align: center;
+}
+.footerbox {
+	width: 400px; float: left; margin: 15px;
+	background: url(images/net.png);
+	height: 320px;
+	padding-bottom: 5px;
+}
+
+
+	.footerLeft {
+		float: left; width: 200px;
+		margin-top: 10px;
+		padding: 5px;
+	}
+
+.footerbox h1 {
+	background: #fff;
+	border: 5px solid #054B65;
+	-moz-box-shadow: 0px 0px 8px #333;
+	-webkit-box-shadow: 0px 0px 8px #333;
+	box-shadow: 0px 0px 8px #333;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 1px;
+}
+.footerbox p {
+	color: #fff;
+	padding: 15px;
+}
+
+	.footerbox p.large {
+		font-size: 15px;
+		font-style: italic;
+	}
+
+.weatherbox {
+	background: #fff;
+	padding: 5px 5px 15px 5px;
+	position: relative;
+	width: 160px;
+}
+
+	.footerbox p.nopadding {
+		padding: 5px;
+	}
+
+	.GENXHvertLinks {
+		display: none; 
+	}
+	
+	
+/* TRANSIENT SLIP RESERVATION FORM
+   ================================================== */
+
+label span {
+	color: red;
+}	
+
+input[type="text"], textarea, select { 
+	border: 1px solid #bdbdbd;
+	font: 15px 'Trebuchet MS', Arial, sans-serif;
+		color: #606060;
+	padding: 5px;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+	border: 3px double #bdbdbd;
+	color: #E8700A;
+	padding: 3px;
+}
+
+span.wpcf7-form-control-wrap {
+	display: inline-block;
+}
+
+.storage-day, .storage-month, .storage-year {
+	float: left; 
+	width:80px;
+}
+
+input[type="submit"] {
+	background: #DF6B01;
+	border: 5px solid #fff;
+	box-shadow: 0 0 8px #333;
+	cursor: pointer;
+	display: block;
+	font: 30px 'LeagueGothicRegular', 'Trebuchet MS', Arial, sans-serif;
+		color: #fff;
+		text-align: center;
+	margin-top: 15px; padding: 15px 30px;
+}
+
+
+
+
+
+.weatherbox input[type="text"] {
+		border: 1px solid black;
+		display: inline;
+	}
+	
+	
+/* Photo popups */
+
+div#shShutter {
+	z-index: 8000 !important;
+}
+
+div#shDisplay {
+	z-index: 8002 !important;
+}
